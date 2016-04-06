@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import Hotspot from './Hotspot';
 
 require("../stylesheets/components/image");
 
@@ -10,11 +11,18 @@ class Image extends Component {
   }
 
   render () {
+
+    const hotspots = this.props.hotspots.map((hotspot) => {
+      console.dir(hotspot);
+      return <Hotspot key={Math.random(Date.now() * 100)} top={hotspot.top} left={hotspot.left}/>;
+    });
+
     return (
-      <span>
+      <div className="image-wrapper">
         Image
         <img src={this.props.src}/>
-      </span>
+        {hotspots}
+      </div>
     )
   }
 

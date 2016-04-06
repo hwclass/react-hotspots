@@ -14,15 +14,13 @@ class ImageContainer extends Component {
 
     const images = this.props.images.map((image) => {
       console.dir(image);
-      return <Image key={Math.random(Date.now() * 100)} src={image.src}/>;
+      return <Image key={Math.random(Date.now() * 100)} src={image.src} hotspots={image.hotspots}/>;
     });
 
     return (
       <div>
         <div key={this.props.key} className="image-container">Image Container</div>
-        <p>
-          {images}
-        </p>
+        {images}
       </div>
     ) 
   }
