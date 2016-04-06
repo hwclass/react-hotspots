@@ -14,7 +14,7 @@ class ImageContainer extends Component {
 
     const images = this.props.images.map((image) => {
       console.dir(image);
-      return <Image key={Math.random(Date.now() * 100)} src={image}/>;
+      return <Image key={Math.random(Date.now() * 100)} src={image.src}/>;
     });
 
     return (
