@@ -1,3 +1,13 @@
+const autoprefixer = require('autoprefixer'),
+      ExtractTextPlugin = require('extract-text-webpack-plugin'),
+      path = require('path');
+
+const sassLoaders = [
+  'css-loader',
+  'postcss-loader',
+  'sass-loader?indentedSyntax=sass&includePaths[]=' + path.resolve(__dirname, './client/src/stylesheets')
+]
+
 module.exports = {
   entry: [
     './client/src/App.js'
@@ -7,6 +17,14 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js'
   },
+  plugins: [
+    new ExtractTextPlugin('[name].css')
+  ],
+  postcss: [
+    autoprefixer({
+      browsers: ['last 2 versions']
+    })
+  ],
   module: {
     loaders: [
       {
@@ -19,6 +37,10 @@ module.exports = {
           'style?sourceMap',
           'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]'
         ]
+      },
+      {
+        test: /\.sass$/,
+        loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
       },
       { 
         test: /\.jsx?$/, 
@@ -44,7 +66,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.sass']
   },
   devServer: {
     historyApiFallback: true,

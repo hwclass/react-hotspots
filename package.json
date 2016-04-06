@@ -18,7 +18,9 @@
     "hotspots"
   ],
   "author": "hwclass",
-  "contributors": ["hwclass"],
+  "contributors": [
+    "hwclass"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hwclass/sony-hotspots/issues"
@@ -33,6 +35,7 @@
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
     "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-less": "^1.2.0",
@@ -47,7 +50,10 @@
     "karma-chrome-launcher": "^0.2.2",
     "karma-jasmine": "^0.3.7",
     "mocha": "^2.4.5",
+    "node-sass": "^3.4.2",
+    "postcss-loader": "^0.8.2",
     "react-addons-test-utils": "^0.14.7",
+    "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "superstatic": "^4.0.1",
     "webpack": "^1.12.9",
@@ -69,7 +75,7 @@
     "redis": "^2.4.2",
     "redux": "^3.0.4"
   },
-  "engines" : { 
-    "node" : ">5.9.1"
+  "engines": {
+    "node": ">5.9.1"
   }
 }

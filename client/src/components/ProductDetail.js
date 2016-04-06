@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+require("../stylesheets/components/productDetail");
 
 class ProductDetail extends Component {
 
@@ -9,7 +10,7 @@ class ProductDetail extends Component {
 
   render () {
     return (
-      <div>Product Detail Section</div>
+      <div className='product-detail'>Product Detail Section</div>
     )
   }
 
