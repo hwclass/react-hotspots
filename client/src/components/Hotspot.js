@@ -11,13 +11,15 @@ class Hotspot extends Component {
 
   render () {
 
-    const styles = {
-      top : {top : this.props.top},
-      left : {left : this.props.left}
+    const style = {
+      hotspot : {
+        top : this.props.top,
+        left : this.props.left
+      }
     };
 
     return (
-      <div className="hotspot" style={styles.top, styles.left}>Hotspot</div>
+      <div className="hotspot" style={style.hotspot}></div>
     )
   }
 

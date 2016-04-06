@@ -27,7 +27,7 @@ class ProductDetail extends Component {
         hotspots : [
           {
             top: '32%',
-            left: '12%'
+            left: '2%'
           },
           {
             top: '24%',
