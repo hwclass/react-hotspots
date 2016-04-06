@@ -11,7 +11,10 @@ class Image extends Component {
 
   render () {
     return (
-      <img className="image" src={this.props.src}/>
+      <span>
+        Image
+        <img src={this.props.src}/>
+      </span>
     )
   }
 
