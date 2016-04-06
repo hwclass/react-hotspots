@@ -19,7 +19,7 @@ class ImageContainer extends Component {
 
     return (
       <div>
-        <div key={this.props.key} className="image-container">Image Container</div>
+        <div key={this.props.key} className="image-container"></div>
         {images}
       </div>
     ) 

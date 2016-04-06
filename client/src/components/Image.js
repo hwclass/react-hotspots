@@ -19,7 +19,6 @@ class Image extends Component {
 
     return (
       <div className="image-wrapper">
-        Image
         <img src={this.props.src}/>
         {hotspots}
       </div>

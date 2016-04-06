@@ -48,8 +48,8 @@ class ProductDetail extends Component {
         src: 'http://www.infoanimales.com/wp-content/uploads/2014/08/Informacion-sobre-el-Castor-Americano-300x250.jpg',
         hotspots : [
           {
-            top: '2%',
-            left: '23%'
+            top: '55%',
+            left: '86%'
           }
         ]
       }
@@ -57,7 +57,6 @@ class ProductDetail extends Component {
 
     return (
       <div className='product-detail'>
-        Product Detail Section
         <ImageContainer key={Math.random(Date.now() * 100)} images={images}/>
       </div>
     )

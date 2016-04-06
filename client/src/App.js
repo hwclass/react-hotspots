@@ -14,7 +14,6 @@ class App extends Component {
   render () {
     return (
       <div>
-        Hello Papa! state : {this.state.some}
         <ProductDetail/>
       </div>
     )
