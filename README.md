@@ -11,8 +11,8 @@ Challengy application example for experimenting responsive hotspots for Sony
 * [React](https://facebook.github.io/react/) / for client-side view, functionality and state control
 * [Webpack](https://webpack.github.io/) / as development bundler
 * [Grunt](http://gruntjs.com/) / as paranoid android 
-* [Less](http://lesscss.org/) / as more for CSS
-* [Karma](https://karma-runner.github.io/0.13/index.html) / as spectacular goal
+* [Sass](http://sass-lang.com/) / declarative CSS
+* [Karma](https://karma-runner.github.io/0.13/index.html) / as spectacular tracking the status
 
 <!--<img src="http://oi65.tinypic.com/idy4g9.jpg" style="width: 100%;" border="0">-->
 

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import ToolTip from './ToolTip';
 
 require("../stylesheets/components/hotspot");
 
@@ -19,7 +20,10 @@ class Hotspot extends Component {
     };
 
     return (
-      <div className="hotspot" style={style.hotspot}></div>
+      <span>
+        <div className="hotspot" style={style.hotspot} onMouseOver={() => {console.log('on mouse over.')}}></div>
+        <ToolTip title={this.props.tooltip.title} text={this.props.tooltip.text}/>
+      </span>
     )
   }
 

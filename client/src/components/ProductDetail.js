@@ -18,7 +18,11 @@ class ProductDetail extends Component {
         hotspots : [
           {
             top: '10%',
-            left: '20%'
+            left: '20%',
+            tooltip : {
+              title : 'Modal Title',
+              text : 'Some tooltip content...'
+            }
           }
         ]
       },
@@ -27,11 +31,19 @@ class ProductDetail extends Component {
         hotspots : [
           {
             top: '32%',
-            left: '2%'
+            left: '2%',
+            tooltip : {
+              title : 'Modal Title',
+              text : 'Some tooltip content...'
+            }
           },
           {
             top: '24%',
-            left: '33%'
+            left: '33%',
+            tooltip : {
+              title : 'Modal Title',
+              text : 'Some tooltip content...'
+            }
           }
         ]
       },
@@ -40,7 +52,11 @@ class ProductDetail extends Component {
         hotspots : [
           {
             top: '24%',
-            left: '21%'
+            left: '21%',
+            tooltip : {
+              title : 'Modal Title',
+              text : 'Some tooltip content...'
+            }
           }
         ]
       },
@@ -49,7 +65,11 @@ class ProductDetail extends Component {
         hotspots : [
           {
             top: '55%',
-            left: '86%'
+            left: '86%',
+            tooltip : {
+              title : 'Modal Title',
+              text : 'Some tooltip content...'
+            }
           }
         ]
       }

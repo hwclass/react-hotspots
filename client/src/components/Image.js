@@ -13,8 +13,7 @@ class Image extends Component {
   render () {
 
     const hotspots = this.props.hotspots.map((hotspot) => {
-      console.dir(hotspot);
-      return <Hotspot key={Math.random(Date.now() * 100)} top={hotspot.top} left={hotspot.left}/>;
+      return <Hotspot key={Math.random(Date.now() * 100)} top={hotspot.top} left={hotspot.left} tooltip={hotspot.tooltip}/>;
     });
 
     return (
