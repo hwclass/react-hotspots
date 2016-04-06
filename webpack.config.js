@@ -1,6 +1,6 @@
 module.exports = {
   entry: [
-    './src/App.js'
+    './client/src/App.js'
   ],
   output: {
     path: __dirname,
@@ -48,6 +48,6 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
+    contentBase: './client'
   }
 };
