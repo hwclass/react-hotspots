@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import ProductDetail from './components/ProductDetail';
 
 class App extends Component {
 
@@ -14,6 +15,7 @@ class App extends Component {
     return (
       <div>
         Hello Papa! state : {this.state.some}
+        <ProductDetail/>
       </div>
     )
   }
