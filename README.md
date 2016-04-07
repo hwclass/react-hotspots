@@ -6,13 +6,13 @@ Challengy application example for experimenting responsive hotspots for Sony
 * [Babel (ES6)](http://babel.io) / as ES6 dialect
 * [Express](http://expressjs.com) / as middleware for server-side and client-side
 * [Redis](http://redis.io) / as key-value hulk
-* [Bolt](https://github.com/ecto/bolt) / as common event system
-* [Server-Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) / as events sending from server-side
+[x] [Bolt](https://github.com/ecto/bolt) / as common event system
+[x] [Server-Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) / as events sending from server-side
 * [React](https://facebook.github.io/react/) / for client-side view, functionality and state control
 * [Webpack](https://webpack.github.io/) / as development bundler
-* [Grunt](http://gruntjs.com/) / as paranoid android 
+[x] [Grunt](http://gruntjs.com/) / as paranoid android 
 * [Sass](http://sass-lang.com/) / declarative CSS
-* [Karma](https://karma-runner.github.io/0.13/index.html) / as spectacular tracking the status
+[x] [Karma](https://karma-runner.github.io/0.13/index.html) / as spectacular tracking the status
 
 <!--<img src="http://oi65.tinypic.com/idy4g9.jpg" style="width: 100%;" border="0">-->
 
