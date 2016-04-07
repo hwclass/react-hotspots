@@ -3,13 +3,30 @@ import ReactDOM from 'react-dom';
 
 require("../stylesheets/components/tooltip");
 
-var ToolTip = (props) => {
-  return (
-    <div className="tooltip">
-      <p>{props.title}</p>
-      <p>{props.body}</p>
-    </div>
-  )
+class ToolTip extends Component {
+
+  constructor (props) {
+    super(props);
+  }
+
+  render () {
+
+    const style = {
+      tooltip : {
+        top : this.props.top,
+        left : this.props.left
+      }
+    };
+
+    return (
+      <span className="tooltip" style={style.tooltip}>
+        <p>{this.props.title}</p>
+        <p>{this.props.body}</p>
+      </span>
+    )
+
+  }
+
 };
 
 export default ToolTip;

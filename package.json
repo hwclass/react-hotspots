@@ -6,7 +6,8 @@
   "scripts": {
     "start-redis": "redis-server /usr/local/etc/redis.conf",
     "start-server": "node ./server.js",
-    "start-webpack": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --inline --colors"
+    "start-webpack": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --inline --colors",
+    "start-webpack-profiler" : "webpack --progress -c --profile --json > stats.json"
   },
   "repository": {
     "type": "git",

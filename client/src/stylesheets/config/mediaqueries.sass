@@ -5,11 +5,11 @@ $phablet-width: 480px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
-@mixin phone {
-	@media (min-width: #{$phone-width}) and (max-width: #{$phablet-width}) {
+/*
+=phone
+	@media (min-width: $phone-width) and (max-width: $phablet-width) {
 		@content
 	}
-}
 
 @mixin phablet {
   @media (min-width: #{$phablet-width}) and (max-width: #{$tablet-width}) {
@@ -19,6 +19,7 @@ $desktop-width: 1024px;
 
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
-    @content
+    @content 
   }
 }
+*/
