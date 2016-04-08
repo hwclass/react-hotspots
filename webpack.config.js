@@ -67,10 +67,11 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.jsx', '.sass'],
-    modulesDirectories : ['./client/src/stylesheets']
+    modulesDirectories : ['./client/src/stylesheets', './node_modules']
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './client'
+    contentBase: './client',
+    inline : true
   }
 };
