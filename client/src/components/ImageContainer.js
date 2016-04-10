@@ -13,14 +13,16 @@ class ImageContainer extends Component {
 
   render () {
 
+    /*
     const images = this.props.images.map((image) => {
       return <Image key={Math.random(Date.now() * 100)} src={image.src} hotspots={image.hotspots}/>;
     });
+    */
 
     return (
       <div>
         <div key={this.props.key} className="image-container"></div>
-        {images}
+        <Image key={Math.random(Date.now() * 100)} src={this.props.selectedImage.src} hotspots={this.props.selectedImage.hotspots}/>
       </div>
     ) 
   }

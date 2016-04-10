@@ -21,7 +21,7 @@ class ToolTip extends Component {
     return (
       <span className="tooltip" style={style.tooltip}>
         <p>{this.props.title}</p>
-        <p>{this.props.body}</p>
+        <p>{this.props.text}</p>
       </span>
     )
 

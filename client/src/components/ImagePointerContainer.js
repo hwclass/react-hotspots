@@ -4,25 +4,24 @@ import ImagePointer from './ImagePointer';
 
 require("../stylesheets/components/imagePointerContainer");
 
-class ImagePointerContainer extends Component {
+const ImagePointerContainer = (props) => {
 
-  constructor (props) {
-    super(props);
-  }
+  const imagePointers = props.images.map((pointer, index) => {
+    return <ImagePointer 
+              key={Math.random(Date.now() * 100)}
+              pointer={pointer}
+              counter={++index} 
+              content="İnce ve zarif"
+              onImagePointerClick={props.onImagePointerClick}/>;
+  })
 
-  render () {
-
-    const imagePointers = this.props.images.map((image) => {
-      return <ImagePointer key={Math.random(Date.now() * 100)} content="asdasd"/>;
-    })
-
-    return (
-      <div>
-        <div key={this.props.key} className="image-pointer-container"></div>
+  return (
+    <div>
+      <div key={props.key} className="image-pointer-container">
         {imagePointers}
       </div>
-    ) 
-  }
+    </div>
+  )
 
 }
 

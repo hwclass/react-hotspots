@@ -31,7 +31,7 @@ class Hotspot extends Component {
         <div 
           className="hotspot" 
           style={style.hotspot} 
-          onClick={() => { this.onClickHandler(); }}></div>
+          onClick={() => {this.onClickHandler()}}></div>
           { !!this.state.activatedTooltip ? <ToolTip title={this.props.tooltip.title} text={this.props.tooltip.text} top={style.hotspot.top} left={style.hotspot.left}/> : null }
       </span>
     )
