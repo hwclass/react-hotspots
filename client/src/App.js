@@ -45,7 +45,7 @@ class App extends Component {
 
     const images = [
       {
-        src: 'http://sonyglobal.scene7.com/is/image/gwtprod/93a8c28123eede1d42d33871e6553daf?fmt=jpeg',
+        src: 'http://sonyglobal.scene7.com/is/image/gwtprod/93a8c28123eede1d42d33871e6553daf?fmt=jpeg&wid=960',
         hotspots : [
           {
             top: '10%',
@@ -58,7 +58,7 @@ class App extends Component {
         ]
       },
       {
-        src: 'http://sonyglobal.scene7.com/is/image/gwtprod/54c77aef97fe56422f0e6c9ba105b23a?fmt=jpeg',
+        src: 'http://sonyglobal.scene7.com/is/image/gwtprod/54c77aef97fe56422f0e6c9ba105b23a?fmt=jpeg&wid=960',
         hotspots : [
           {
             top: '32%',
