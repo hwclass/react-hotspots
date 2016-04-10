@@ -22,7 +22,7 @@ class ImageContainer extends Component {
     return (
       <div>
         <div key={this.props.key} className="image-container"></div>
-        <Image key={Math.random(Date.now() * 100)} src={this.props.selectedImage.src} hotspots={this.props.selectedImage.hotspots}/>
+        <Image imageProps={this.props.imageProps} key={Math.random(Date.now() * 100)} src={this.props.selectedImage.src} hotspots={this.props.selectedImage.hotspots}/>
       </div>
     ) 
   }

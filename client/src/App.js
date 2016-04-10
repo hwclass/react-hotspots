@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ProductDetail from './components/ProductDetail';
+import {imageProps} from './config';
+
+require("./stylesheets/components/app");
 
 class App extends Component {
 
@@ -16,11 +19,16 @@ class App extends Component {
     
     if (!!this.state.isEventSourceSupported) {
       const eventSource = new EventSource('http://localhost:3000/module/' + this.state.moduleId);
-      eventSource.addEventListener('message', (response) => {
-        const moduleData = JSON.parse(response.data);
-      }, false);
+      const self = this;
+      // eventSource.addEventListener('message', (response) => {
+      //   this.state
+      //   const moduleData = JSON.parse(response.data);
+      //   self.setState({
+      //     moduleData
+      //   })
+      // }, false);
     } else {
-
+      console.log('An error occured while fetching data.');
     }
   }
 
@@ -45,7 +53,7 @@ class App extends Component {
 
     const images = [
       {
-        src: 'http://sonyglobal.scene7.com/is/image/gwtprod/93a8c28123eede1d42d33871e6553daf?fmt=jpeg&wid=960',
+        src: 'http://sonyglobal.scene7.com/is/image/gwtprod/93a8c28123eede1d42d33871e6553daf',
         hotspots : [
           {
             top: '10%',
@@ -58,7 +66,7 @@ class App extends Component {
         ]
       },
       {
-        src: 'http://sonyglobal.scene7.com/is/image/gwtprod/54c77aef97fe56422f0e6c9ba105b23a?fmt=jpeg&wid=960',
+        src: 'http://sonyglobal.scene7.com/is/image/gwtprod/54c77aef97fe56422f0e6c9ba105b23a',
         hotspots : [
           {
             top: '32%',
@@ -81,8 +89,9 @@ class App extends Component {
     ];
 
     return (
-      <div>
-        <ProductDetail 
+      <div className="container">
+        <ProductDetail
+          imageProps={imageProps}
           moduleData={this.state.moduleData}
           images={images}
           selectedImage={(this.state.selectedImage===null?images[0]:this.state.selectedImage)}

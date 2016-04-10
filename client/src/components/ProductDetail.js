@@ -16,11 +16,12 @@ class ProductDetail extends Component {
 
     return (
       <div className='product-detail'>
-        <ImageContainer 
+        <ImageContainer
+          imageProps={this.props.imageProps}
           key={Math.random(Date.now() * 100)} 
           images={this.props.images}
           selectedImage = {this.props.selectedImage}/>
-        <ImagePointerContainer 
+        <ImagePointerContainer
           key={Math.random(Date.now() * 1000)} 
           images={this.props.images}
           selectedImage = {this.props.selectedImage}
