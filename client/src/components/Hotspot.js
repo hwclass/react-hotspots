@@ -9,16 +9,12 @@ class Hotspot extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      onMouseOver : false
+      activatedTooltip : false
     }
   }
 
-  onMouseOver () {
-    this.setState({onMouseOver : true});
-  }
-
-  onMouseOut () {
-    this.setState({onMouseOver : false});
+  onClickHandler () {
+    this.setState({activatedTooltip : !this.state.activatedTooltip});
   }
 
   render () {
@@ -35,9 +31,8 @@ class Hotspot extends Component {
         <div 
           className="hotspot" 
           style={style.hotspot} 
-          onMouseOver={() => { this.onMouseOver(); }}
-          onMouseOut={() => { this.onMouseOut(); }}></div>
-          { !!this.state.onMouseOver ? <ToolTip title={this.props.tooltip.title} text={this.props.tooltip.text} top={style.hotspot.top} left={style.hotspot.left}/> : null }
+          onClick={() => { this.onClickHandler(); }}></div>
+          { !!this.state.activatedTooltip ? <ToolTip title={this.props.tooltip.title} text={this.props.tooltip.text} top={style.hotspot.top} left={style.hotspot.left}/> : null }
       </span>
     )
   }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import Image from './Image';
+import ImagePointer from './ImagePointer';
 
 require("../stylesheets/components/imageContainer");
 

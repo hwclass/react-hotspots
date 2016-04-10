@@ -15,8 +15,10 @@ const Redis = (() => {
     client.set(key, val, redis.print);
   }
 
-  getKey = (client, key) => {
-    return client.get(key, redis.print);
+  getKey = (client, key, callback) => {
+    client.get(key, (err, reply) => {
+      callback(reply);
+    });
   }
 
   return {
