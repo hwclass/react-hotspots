@@ -7,7 +7,7 @@ Challengy application example for experimenting responsive hotspots for Sony
 - [x] [Express](http://expressjs.com) / as middleware for server-side and client-side
 - [x] [Redis](http://redis.io) / as key-value hulk
 - [ ] [Bolt](https://github.com/ecto/bolt) / as common event system
-- [ ] [Server-Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) / as events sending from server-side
+- [x] [Server-Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) / as events sending from server-side
 - [x] [React](https://facebook.github.io/react/) / for client-side view, functionality and state control
 - [x] [Webpack](https://webpack.github.io/) / as development bundler
 - [ ] [Grunt](http://gruntjs.com/) / as paranoid android 
