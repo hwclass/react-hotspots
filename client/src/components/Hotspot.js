@@ -23,17 +23,32 @@ class Hotspot extends Component {
       hotspot : {
         top : this.props.top,
         left : this.props.left
+      },
+      toolTip : {
+        top : this.props.top,
+        left : this.props.left
       }
     };
 
+    const toolTipStyle = {
+
+    }
+
     return (
-      <span>
+      <div>
         <div 
-          className="hotspot" 
-          style={style.hotspot} 
-          onClick={() => {this.onClickHandler()}}></div>
-          { !!this.state.activatedTooltip ? <ToolTip title={this.props.tooltip.title} text={this.props.tooltip.text} top={style.hotspot.top} left={style.hotspot.left}/> : null }
-      </span>
+          className="hotspot-module"
+          onClick={() => {this.onClickHandler()}}>
+            <span className="hspot-outer" style={style.hotspot}>
+              <span className="hspot-core">
+                <span className="icons">
+                  <i className="fa fa-plus"></i>
+                </span>
+              </span>
+            </span>
+          </div>
+          { !!this.state.activatedTooltip ? <ToolTip title={this.props.tooltip.title} text={this.props.tooltip.text} top={style.toolTip.top} left={style.toolTip.left}/> : null }
+      </div>
     )
   }
 

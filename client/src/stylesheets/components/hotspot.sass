@@ -2,10 +2,427 @@
 
 /*@import 'config/mediaQueries.sass';*/
 
-.hotspot 
-  position: absolute
-  top: 0
-  left: 0
-  width: 32px
-  height: 32px
-  background: url('http://www.stergidisltd.com/assets/site/public/1/19497-sqplus.png') no-repeat 0
+.hotspot-module
+  .hspot-outer
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    -o-user-select: none
+    user-select: none
+  .black
+    color: #000
+    .overlay-inner
+      background-color: #000
+      color: #d2d2db
+  .gray05
+    color: #1f2024
+    .overlay-inner
+      background-color: #1f2024
+      .t6
+        color: #d2d2db
+  .gray10
+    color: #212530
+    .overlay-inner
+      background-color: #212530
+      .t6
+        color: #d2d2db
+  .gray20
+    color: #2f353d
+    .overlay-inner
+      background-color: #2f353d
+      .t6
+        color: #d2d2db
+  .black
+    color: #fff
+    &:before, .t6
+      color: #fff
+  .gray05
+    color: #fff
+    &:before, .t6
+      color: #fff
+  .gray10
+    color: #fff
+    &:before, .t6
+      color: #fff
+  .gray20
+    color: #fff
+    &:before, .t6
+      color: #fff
+  .gray25
+    color: #3c3c42
+    .overlay-inner
+      background-color: #3c3c42
+      .t6
+        color: #d2d2db
+  .gray30
+    color: #504d56
+    .overlay-inner
+      background-color: #504d56
+      .t6
+        color: #d2d2db
+  .gray40
+    color: #83838f
+    .overlay-inner
+      background-color: #83838f
+      div, blockquote.l4, .p3
+        color: #d2d2db
+  .gray50
+    color: #bcbccc
+    .overlay-inner
+      background-color: #bcbccc
+  .gray60
+    color: #d2d2db
+    .overlay-inner
+      background-color: #d2d2db
+      div, .t6
+        color: #2f353d
+  .gray70
+    color: #e4e7eb
+    .overlay-inner
+      background-color: #e4e7eb
+  .gray75
+    color: #e8edf3
+    .overlay-inner
+      background-color: #e8edf3
+  .gray80
+    color: #f1f5f9
+    .overlay-inner
+      background-color: #f1f5f9
+  .gray90
+    color: #f3f4f6
+    .overlay-inner
+      background-color: #f3f4f6
+  .gray95
+    color: #f8f8fa
+    .overlay-inner
+      background-color: #f8f8fa
+  .white
+    color: #fff
+    .overlay-inner
+      background-color: #fff
+    .middle
+      border-bottom: 1px solid #e4e7eb
+  .none
+    background-color: transparent
+    -moz-box-shadow: none
+    -webkit-box-shadow: none
+    box-shadow: none
+    border: none
+    div
+      background-color: transparent
+      -moz-box-shadow: none
+      -webkit-box-shadow: none
+      box-shadow: none
+      border: none
+      color: #fff !important
+  .arrow-left
+    border: 10px solid transparent
+    width: 0
+    height: 0
+    position: absolute
+    z-index: 4
+  .arrow-right
+    border: 10px solid transparent
+    width: 0
+    height: 0
+    position: absolute
+    z-index: 4
+    top: 16px
+    left: -7px
+    border-left-width: 8px
+    &.gray05
+      border-left-color: #1f2024
+    &.gray10
+      border-left-color: #212530
+    &.gray20
+      border-left-color: #2f353d
+    &.gray25
+      border-left-color: #3c3c42
+    &.gray30
+      border-left-color: #504d56
+    &.gray40
+      border-left-color: #83838f
+    &.gray50
+      border-left-color: #bcbccc
+    &.gray60
+      border-left-color: #d2d2db
+    &.gray70
+      border-left-color: #e4e7eb
+    &.gray75
+      border-left-color: #e8edf3
+    &.gray80
+      border-left-color: #f1f5f9
+    &.gray90
+      border-left-color: #f3f4f6
+    &.gray95
+      border-left-color: #f8f8fa
+    &.black
+      border-left-color: #000
+    &.white
+      border-left-color: #fff
+    &.dark-gray
+      border-left-color: #212530
+    &.none
+      display: none
+  .arrow-left
+    top: 16px
+    left: 37px
+    border-right-width: 8px
+    &.gray05
+      border-right-color: #1f2024
+    &.gray10
+      border-right-color: #212530
+    &.gray20
+      border-right-color: #2f353d
+    &.gray25
+      border-right-color: #3c3c42
+    &.gray30
+      border-right-color: #504d56
+    &.gray40
+      border-right-color: #83838f
+    &.gray50
+      border-right-color: #bcbccc
+    &.gray60
+      border-right-color: #d2d2db
+    &.gray70
+      border-right-color: #e4e7eb
+    &.gray75
+      border-right-color: #e8edf3
+    &.gray80
+      border-right-color: #f1f5f9
+    &.gray90
+      border-right-color: #f3f4f6
+    &.gray95
+      border-right-color: #f8f8fa
+    &.black
+      border-right-color: #000
+    &.white
+      border-right-color: #fff
+    &.dark-gray
+      border-right-color: #212530
+    &.none
+      display: none
+  .hspot-small
+    .arrow-right, .arrow-left
+      border-width: 8px
+    .arrow-right
+      top: 13px
+      left: -8px
+    .arrow-left
+      top: 13px
+      left: 40px
+  .hspot-outer
+    position: absolute
+    z-index: 1
+    top: 0
+    width: 50px
+    height: 50px
+    background-color: rgba(80, 77, 86, 0.3)
+    cursor: pointer
+    color: #fff
+    border-radius: 50%
+    -webkit-transition: 0.1s
+    transition: 0.1s
+    ul
+      list-style-position: inside
+      list-style-type: disc
+    .hspot-core, .hspot-core-on
+      position: absolute
+      display: block
+      z-index: 2
+      top: 50%
+      left: 50%
+      margin: -40px 0 0 -40px
+      width: 80px
+      height: 80px
+      text-align: center
+      font-size: 2em
+      -webkit-transform: scale(0.5)
+      -ms-transform: scale(0.5)
+      transform: scale(0.5)
+      border-radius: 50%
+      -webkit-transition: 0.1s ease-out
+      transition: 0.1s ease-out
+      -webkit-backface-visibility: hidden
+    .hspot-core .icons, .hspot-core-on .icons
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 100px
+      margin: -30px 0 0 -50px
+    .hspot-core .icons i, .hspot-core-on .icons i
+      margin: 0
+      -webkit-font-smoothing: antialiased
+      -webkit-transition: 0.1s ease-out
+      transition: 0.1s ease-out
+      -webkit-transition-property: all
+    .hspot-core.hspot-hover-on, .hspot-core-on.hspot-hover-on
+      -webkit-transform: scale(0.55)
+      -ms-transform: scale(0.55)
+      transform: scale(0.55)
+    .hspot-core.hspot-hover-on i, .hspot-core-on.hspot-hover-on i
+      margin: 0 3px
+    .hspot-core
+      background: #f25529
+      .icons i
+        -webkit-transform: rotate(0deg)
+        -ms-transform: rotate(0deg)
+        transform: rotate(0deg)
+      &.hspot-hover-on
+        background: #d94c25
+    .hspot-core-on
+      background: #504d56
+      .icons i
+        -webkit-transform: rotate(45deg)
+        -ms-transform: rotate(45deg)
+        transform: rotate(45deg)
+        &.numbered-hotspot
+          -webkit-transform: rotate(0deg)
+          -ms-transform: rotate(0deg)
+          transform: rotate(0deg)
+        &.numbered-manual
+          -webkit-transform: rotate(0deg)
+          -ms-transform: rotate(0deg)
+          transform: rotate(0deg)
+          position: relative
+          font-weight: bold
+          top: 2px
+      &.hspot-hover-on
+        background: #83838f
+    .spot-container .numbered-hotspot:before
+      counter-increment: hotNumber 1
+      content: counter(hotNumber)
+      -webkit-transform: rotate(0deg)
+      -ms-transform: rotate(0deg)
+      transform: rotate(0deg)
+    .hspot-logo, .hspot-imageonly
+      max-width: 380px
+      width: auto
+    .hspot-logo
+      img
+        max-width: 380px
+        width: auto
+        position: relative
+      position: absolute
+    .hspot-imageonly
+      position: relative
+    .hspot-addon
+      pointer-events: none
+      width: 280px
+      display: inline-block
+      ul
+        list-style-position: inside
+        list-style-type: disc
+      .linkgroup
+        pointer-events: all
+      h5, p
+        margin-bottom: 0
+        margin-top: 0
+      &.left-justify
+        h5, p
+          text-align: left
+      &.center-justify
+        h5, p
+          text-align: center
+      &.inline-justify
+        vertical-align: bottom
+        h5
+          text-align: left
+          display: inline
+          vertical-align: bottom
+          height: 100%
+        p
+          text-align: left
+          display: inline
+          vertical-align: bottom
+          height: 100%
+          display: inline-block
+          margin-bottom: 1px
+      p
+        margin-top: 0.5em
+    .hspot-label
+      position: absolute
+      top: 16px
+      left: 54px
+      width: 140px
+      -ms-word-break: break-all
+      word-break: break-all
+      word-break: break-word
+      text-align: left
+      -webkit-hyphens: auto
+      -moz-hyphens: auto
+      hyphens: auto
+      &.label-right
+        top: 16px
+        left: 54px
+      &.label-left
+        top: 16px
+        left: auto
+        right: 54px
+        text-align: right
+      &.label-top
+        top: auto
+        bottom: 42px
+        left: -44px
+        right: auto
+        text-align: center
+      &.label-bottom
+        top: 50px
+        left: -44px
+        bottom: auto
+        right: auto
+        text-align: center
+    &.hspot-small
+      margin-top: -20px
+      left: -15px
+      width: 42px
+      height: 42px
+      .overlay-base.variant1.to-right
+        left: 48px
+      .hspot-core
+        margin: -32px 0 0 -32px
+        width: 64px
+        height: 64px
+        .icons i.numbered-manual
+          position: relative
+          font-weight: bold
+          top: 2px
+      .hspot-core-on
+        margin: -32px 0 0 -32px
+        width: 64px
+        height: 64px
+      .hspot-label
+        top: 12px
+        &.label-right
+          left: 44px
+        &.label-left
+          right: 44px
+        &.label-top
+          bottom: 34px
+          left: -52px
+        &.label-bottom
+          top: 41px
+          left: -52px
+    &.hide-spot, &.hspot-always-open, &.hspot-mode-addOn, &.hspot-mode-textonly, &.hspot-mode-imageonly
+      background: none
+    &.hide-spot .hspot-core, &.hspot-always-open .hspot-core, &.hspot-mode-addOn .hspot-core, &.hspot-mode-textonly .hspot-core, &.hspot-mode-imageonly .hspot-core, &.hide-spot .hspot-core-on, &.hspot-always-open .hspot-core-on, &.hspot-mode-addOn .hspot-core-on, &.hspot-mode-textonly .hspot-core-on, &.hspot-mode-imageonly .hspot-core-on
+      display: none !important
+    &.hspot-mode-textonly p.gray05
+      color: #000
+  .fonticon-10-plus-sm
+    display: none
+
+.hspot-small .hotspot-module .fonticon-10-plus-sm, .hotspot-module .fonticon-10-plus-skinny
+  display: inline-block
+
+.hspot-small .hotspot-module .fonticon-10-plus-skinny
+  display: none
+
+.hotspot-module .hspot-small
+  .fonticon-10-plus-sm
+    display: inline-block
+  .fonticon-10-plus-skinny
+    display: none
+
+.fa-plus
+  margin-top : 15px

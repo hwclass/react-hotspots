@@ -14,9 +14,11 @@ class ToolTip extends Component {
     const style = {
       tooltip : {
         top : this.props.top,
-        left : this.props.left
+        left : '24.2%'
       }
     };
+
+    console.log(top);
 
     return (
       <span className="tooltip" style={style.tooltip}>
