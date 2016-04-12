@@ -16,7 +16,20 @@ class App extends Component {
       selectedImage : null,
       selectedPointer : null
     }
-    
+    this.activateServerSentEvents();
+  }
+
+  componentWillMount () {
+    this.state = {
+      isEventSourceSupported : window.EventSource,
+      moduleId : 'editorial_hotspots_590359239320250140028',
+      moduleData : null,
+      selectedImage : null,
+      selectedPointer : null
+    }
+  }
+
+  activateServerSentEvents () {
     if (!!this.state.isEventSourceSupported) {
       const eventSource = new EventSource('http://localhost:3000/module/' + this.state.moduleId);
       const self = this;
@@ -29,16 +42,6 @@ class App extends Component {
       // }, false);
     } else {
       console.log('An error occured while fetching data.');
-    }
-  }
-
-  componentWillMount () {
-    this.state = {
-      isEventSourceSupported : window.EventSource,
-      moduleId : 'editorial_hotspots_590359239320250140028',
-      moduleData : null,
-      selectedImage : null,
-      selectedPointer : null
     }
   }
 
@@ -69,16 +72,16 @@ class App extends Component {
         src: 'http://sonyglobal.scene7.com/is/image/gwtprod/54c77aef97fe56422f0e6c9ba105b23a',
         hotspots : [
           {
-            top: '32%',
-            left: '2%',
+            top: '1%',
+            left: '1%',
             tooltip : {
               title : 'Modal 2 Title',
               text : 'Some tooltip content...'
             }
           },
           {
-            top: '24%',
-            left: '33%',
+            top: '5%',
+            left: '5%',
             tooltip : {
               title : 'Modal 3 Title',
               text : 'Some tooltip content...'
@@ -94,7 +97,7 @@ class App extends Component {
           imageProps={imageProps}
           moduleData={this.state.moduleData}
           images={images}
-          selectedImage={(this.state.selectedImage===null?images[0]:this.state.selectedImage)}
+          selectedImage={(this.state.selectedImage === null ? images[0] : this.state.selectedImage)}
           onImagePointerClick={selectedPointer => this.onImagePointerClick(selectedPointer)}/>
       </div>
     )

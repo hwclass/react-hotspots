@@ -21,7 +21,10 @@ class ToolTip extends Component {
     console.log(top);
 
     return (
-      <span className="tooltip" style={style.tooltip}>
+      <span 
+        key={this.props.key}
+        className="tooltip" 
+        style={style.tooltip}>
         <p>{this.props.title}</p>
         <p>{this.props.text}</p>
       </span>
