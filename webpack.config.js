@@ -26,6 +26,14 @@ module.exports = {
     })
   ],
   module: {
+    preLoaders: [
+      {
+        test: /\.jsx$|\.js$/,
+        loader: 'eslint-loader',
+        include: __dirname + '/client/**/*',
+        exclude: /bundle\.js$/
+      }
+    ],
     loaders: [
       {
         exclude: /node_modules/,
