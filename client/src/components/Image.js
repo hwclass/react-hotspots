@@ -1,16 +1,16 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Hotspot from './Hotspot';
 
-require("../stylesheets/components/image");
+require('../stylesheets/components/image');
 
 class Image extends Component {
 
-  constructor (props) {
+  constructor(props) {
     super(props);
   }
 
-  render () {
+  render() {
 
     const hotspots = this.props.hotspots.map((hotspot) => {
       return <Hotspot key={Math.random(Date.now() * 100)} top={hotspot.top} left={hotspot.left} tooltip={hotspot.tooltip}/>
@@ -35,7 +35,7 @@ class Image extends Component {
         highRes : src + imageProps.queries.highRes.phone + '\ ' + '2x',
         fullRes : src + imageProps.queries.highRes.phone + '\ ' + '3x'
       }
-    }
+    };
 
     const srcSets = {
       desktop : actualSrc.desktop.standard + ',' + '\n' +
@@ -47,7 +47,7 @@ class Image extends Component {
       phone : actualSrc.phone.standard + ',' + '\n' +
               actualSrc.phone.highRes + ',' + '\n' +
               actualSrc.phone.fullRes
-    }
+    };
 
     return (
       <div className="image-wrapper">
@@ -64,8 +64,8 @@ class Image extends Component {
         </picture>
         {hotspots}
       </div>
-    )
-
+    );
+    
   }
 
 }

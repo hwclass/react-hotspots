@@ -3,7 +3,7 @@ Challengy application example for experimenting responsive hotspots for Sony
 
 ###Technical Spec
 - [x] [Node.js](www.nodejs.org) / as Javascript hero
-- [x] [Babel (ES6)](http://babel.io) / as ES6 dialect
+- [x] [Babel (ES6)](http://babel.io) / as ES6/ES2015 dialect
 - [x] [Express](http://expressjs.com) / as middleware for server-side and client-side
 - [x] [Redis](http://redis.io) / as key-value hulk
 - [ ] [Bolt](https://github.com/ecto/bolt) / as common event system

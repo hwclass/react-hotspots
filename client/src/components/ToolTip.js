@@ -7,6 +7,13 @@ class ToolTip extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      screenWidth: screen.width
+    }
+  }
+
+  calculatePosition() {
+    return ((screen.width * this.props.left.split('%')[0]) / 100) + parseInt(this.props.hotspotWidtH);
   }
 
   render() {
@@ -14,7 +21,7 @@ class ToolTip extends Component {
     const style = {
       tooltip : {
         top : this.props.top,
-        left : this.props.left
+        left : this.calculatePosition()
       }
     };
 
@@ -25,6 +32,7 @@ class ToolTip extends Component {
         style={style.tooltip}>
         <p>{this.props.title}</p>
         <p>{this.props.text}</p>
+        <p>{this.calculatePosition()}</p>
       </span>
     )
 

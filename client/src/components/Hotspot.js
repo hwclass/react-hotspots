@@ -1,23 +1,23 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ToolTip from './ToolTip';
 
-require("../stylesheets/components/hotspot");
+require('../stylesheets/components/hotspot');
 
 class Hotspot extends Component {
 
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       activatedTooltip : false
     }
-  }
+  };
 
-  onClickHandler () {
+  onClickHandler() {
     this.setState({activatedTooltip : !this.state.activatedTooltip});
-  }
+  };
 
-  render () {
+  render() {
 
     const style = {
       hotspot : {
@@ -29,10 +29,6 @@ class Hotspot extends Component {
         left : this.props.left
       }
     };
-
-    const toolTipStyle = {
-
-    }
 
     return (
       <div>
@@ -47,7 +43,7 @@ class Hotspot extends Component {
               </span>
             </span>
           </div>
-          { !!this.state.activatedTooltip ? <ToolTip key={Math.random(Date.now() * 100)} title={this.props.tooltip.title} text={this.props.tooltip.text} top={style.toolTip.top} left={style.toolTip.left}/> : null }
+          { !!this.state.activatedTooltip ? <ToolTip key={Math.random(Date.now() * 100)} title={this.props.tooltip.title} text={this.props.tooltip.text} top={style.toolTip.top} left={style.toolTip.left} hotspotWidth='80'/> : null }
       </div>
     )
   }
