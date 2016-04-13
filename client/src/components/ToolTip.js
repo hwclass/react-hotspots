@@ -14,7 +14,7 @@ class ToolTip extends Component {
     const style = {
       tooltip : {
         top : this.props.top,
-        left : '24.2%'
+        left : this.props.left
       }
     };
 
