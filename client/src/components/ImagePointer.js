@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-require("../stylesheets/components/imagePointer");
+require('../stylesheets/components/imagePointer');
 
 const ImagePointer = ({pointer, counter, content, onImagePointerClick}) => {
   return (

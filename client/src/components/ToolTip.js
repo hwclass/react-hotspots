@@ -1,15 +1,15 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-require("../stylesheets/components/tooltip");
+require('../stylesheets/components/tooltip');
 
 class ToolTip extends Component {
 
-  constructor (props) {
+  constructor(props) {
     super(props);
   }
 
-  render () {
+  render() {
 
     const style = {
       tooltip : {
@@ -17,8 +17,6 @@ class ToolTip extends Component {
         left : this.props.left
       }
     };
-
-    console.log(top);
 
     return (
       <span 
