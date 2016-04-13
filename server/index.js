@@ -26,7 +26,10 @@ app.get('/module/:id', (req, res) => {
     console.log(err.message);
     res.status(500).send(err);
   } else {
+    console.log(moduleId);
+    console.log(req.params.id);
     if (moduleId === req.params.id) {
+      console.log('Data sending... ' + req.params.id);
       Redis.getKey(redisClient, moduleId, (data) => {
         res.writeHead(200, {
           'Content-Type': 'text/event-stream',

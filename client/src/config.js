@@ -24,8 +24,13 @@ const imageProps = {
   }
 };
 
+const moduleIds = [
+	'editorial_hotspots_590359239320250140028'
+]
+
 export {
 	imageFormat,
 	sizes,
-	imageProps
+	imageProps,
+	moduleIds
 };

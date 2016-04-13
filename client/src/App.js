@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ProductDetail from './components/ProductDetail';
-import { imageProps } from './config';
+import { imageProps, moduleIds } from './config';
 
 require('./stylesheets/components/app');
+
+const _ = require('lodash');
 
 class App extends Component {
 
@@ -11,48 +13,46 @@ class App extends Component {
     super(props);
     this.state = {
       isEventSourceSupported: window.EventSource,
-      moduleId: 'editorial_hotspots_590359239320250140028',
+      moduleId: moduleIds[0],
       moduleData: null,
       selectedImage: null,
       selectedPointer: null,
     };
-    this.activateServerSentEvents();
-  }
+    if (!!this.state.isEventSourceSupported) {
+      const sseUrl = `http://localhost:3000/module/${this.state.moduleId}`;
+      const eventSource = new EventSource(sseUrl);
+      const self = this;
+      eventSource.addEventListener('message', (response) => {
+        self.setState({
+          moduleData: JSON.parse(response.data),
+          images : JSON.parse(response.data).module.hotSpots.popups.image.imageFamily.images
+        });
+      }, false);
+    }
+  };
 
-  componentWillMount() {
-    this.state = {
-      isEventSourceSupported: window.EventSource,
-      moduleId: 'editorial_hotspots_590359239320250140028',
-      moduleData: null,
-      selectedImage: null,
-      selectedPointer: null,
-    };
-  }
+  getModuleId() {
+    return this.state.moduleData.moduleId;
+  };
 
   onImagePointerClick(selectedPointer) {
     this.setState({
       selectedPointer,
       selectedImage: selectedPointer,
     });
-  }
+  };
 
   activateServerSentEvents() {
-    if (!!this.state.isEventSourceSupported) {
-      const sseUrl = `http://localhost:3000/module/$ + ${this.state.moduleId}`;
-      const eventSource = new EventSource(sseUrl);
-      const self = this;
-      eventSource.addEventListener('message', (response) => {
-        self.setState({
-          moduleData: JSON.parse(response.data),
-        });
-      }, false);
-    }
+    console.log('activateServerSentEvents');
+    
   }
 
   render() {
+    //console.dir(this.state.moduleData.module.hotspots.popups.image.imageFamily.images[0]);
     const images = [
       {
-        src: 'http://sonyglobal.scene7.com/is/image/gwtprod/93a8c28123eede1d42d33871e6553daf',
+        /*http://sonyglobal.scene7.com/is/image/gwtprod/93a8c28123eede1d42d33871e6553daf*/
+        src: this.state.images,
         hotspots: [
           {
             top: '10%',
