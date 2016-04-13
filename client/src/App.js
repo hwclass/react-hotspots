@@ -94,10 +94,10 @@ class App extends Component {
           moduleData={this.state.moduleData}
           images={images}
           selectedImage={(this.state.selectedImage === null ? images[0] : this.state.selectedImage)}
-          onImagePointerClick={selectedPointer => this.onImagePointerClick(selectedPointer)} 
-      />
-      </div>;
-    )
+          onImagePointerClick={selectedPointer => this.onImagePointerClick(selectedPointer)}
+        />
+      </div>
+    );
   }
 }
 
