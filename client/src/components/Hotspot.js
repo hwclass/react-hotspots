@@ -43,7 +43,7 @@ class Hotspot extends Component {
               </span>
             </span>
           </div>
-          { !!this.state.activatedTooltip ? <ToolTip key={Math.random(Date.now() * 100)} title={this.props.tooltip.title} text={this.props.tooltip.text} top={style.toolTip.top} left={style.toolTip.left} hotspotWidth='80'/> : null }
+          { !!this.state.activatedTooltip ? <ToolTip key={Math.random(Date.now() * 100)} title={this.props.tooltip.title} text={this.props.tooltip.text} top={style.toolTip.top} left={style.toolTip.left} hotspotWidth='50'/> : null }
       </div>
     )
   }

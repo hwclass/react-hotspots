@@ -13,7 +13,7 @@ class ToolTip extends Component {
   }
 
   calculatePosition() {
-    return ((screen.width * this.props.left.split('%')[0]) / 100) + parseInt(this.props.hotspotWidtH);
+    return ((screen.width * this.props.left.split('%')[0]) / 100) + parseInt(this.props.hotspotWidth);
   }
 
   render() {
