@@ -32,16 +32,16 @@ Challengy application example for experimenting responsive hotspots for Sony
 npm run start-redis
 ```
 
-* Start our Redis watcher
-
-```javascript
-npm run start-redis-subscriber
-```
-
 * Start our Server instance
 
 ```javascript
 npm run start-server
+```
+
+* Start Webpack
+
+```javascript
+npm run start-webpack
 ```
 
 * Open the browser and hit the following:
