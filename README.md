@@ -20,8 +20,9 @@ Challengy application example for experimenting responsive hotspots for Sony
 
 ####Install
 * [Node.js](https://nodejs.org/en/download/)
-* Babel : ```npm install babel -g```
+* [Babel](http://babeljs.io/) : ```npm install babel -g```
 * [Redis](http://redis.io/download)
+* [Webpack](https://webpack.github.io/) : ```npm install webpack -g```
 * Node Dependencies : ```npm install```
 
 ###Initializing
