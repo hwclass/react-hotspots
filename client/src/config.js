@@ -13,13 +13,13 @@ const sizes = {
 
 const imageProps = {
   queries: {
-    desktop: '?fmt=${imageFormat}' + '&wid=${sizes.desktop}',
-    tablet: '?fmt=${imageFormat}' + '&wid=${sizes.tablet}',
-    phone: '?fmt=${imageFormat}' + '&wid=${sizes.phone}',
+    desktop: `?fmt=${imageFormat}` + `&wid=${sizes.desktop}`,
+    tablet: `?fmt=${imageFormat}` + `&wid=${sizes.tablet}`,
+    phone: `?fmt=${imageFormat}` + `&wid=${sizes.phone}`,
     highRes: {
-      desktop: '?fmt=${imageFormat}' + '&wid=${sizes.highRes.desktop}',
-      tablet: '?fmt=${imageFormat}' + '&wid=${sizes.highRes.tablet}',
-      phone: '?fmt=${imageFormat}' + '&wid=${sizes.highRes.phone}',
+      desktop: `?fmt=${imageFormat}` + `&wid=${sizes.highRes.desktop}`,
+      tablet: `?fmt=${imageFormat}` + `&wid=${sizes.highRes.tablet}`,
+      phone: `?fmt=${imageFormat}` + `&wid=${sizes.highRes.phone}`,
     },
   },
 };
