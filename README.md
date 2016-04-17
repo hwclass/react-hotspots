@@ -1,6 +1,8 @@
 # sony-hotspots
 Challengy application example for experimenting responsive hotspots for Sony
 
+<img src="http://i68.tinypic.com/2r4k2h3.png" style="width: 100%;" border="0">
+
 ###Technical Spec
 - [x] [Node.js](www.nodejs.org) / as Javascript hero
 - [x] [Babel (ES6)](http://babel.io) / as ES6/ES2015 dialect
