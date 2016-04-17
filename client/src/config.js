@@ -25,7 +25,7 @@ const imageProps = {
 };
 
 export {
-	imageFormat,
-	sizes,
-	imageProps,
+  imageFormat,
+  sizes,
+  imageProps,
 };
